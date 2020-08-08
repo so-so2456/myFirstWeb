@@ -25,11 +25,25 @@
       /*나중에 나온 클래스 선택자의 결과를 따름*/
     }
     /*아이디 선택자 > 클래스 선택자 > 태그 선택자*/
+    h1 {
+      border-bottom: 1px black solid;
+      margin: 0;
+      padding: 20px;
+    }
+    ol, ul {
+      border-right: 1px black solid;
+      width:100px;
+      margin:0;
+      padding:20px;
+    }
+    body {
+      margin:0;
+    }
   </style>
 </head>
 <!--본문-->
 <body>
-  <h1><a href="index.html" class="saw active">WEB</a></h1>
+  <h1><a href="index.html" class="saw active line">WEB</a></h1>
   <ol> <!--Parents-->
     <li><a href="1.html" class="saw" id="first">HTML</a></li> <!--Children-->
                           <!--우선순위를 높이려면 아이디 선택자를 씀
@@ -66,4 +80,3 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
-
