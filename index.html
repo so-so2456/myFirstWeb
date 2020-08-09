@@ -14,12 +14,6 @@
       font-size: 60px;
       text-align: center;
     }
-    #first {
-      color:orange;
-    }
-    .saw {
-      color:grey;
-    }
     .active {
       color:red;
       /*나중에 나온 클래스 선택자의 결과를 따름*/
@@ -30,34 +24,63 @@
       margin: 0;
       padding: 20px;
     }
-    ol, ul {
-      border-right: 1px black solid;
+    #grid ol, ul {
       width:100px;
       margin:0;
-      padding:20px;
+      padding:10px;
+      margin: 0 auto;
+      padding-left: 30px;
+    }
+    #grid ol {
+      padding-top: 20px;
     }
     body {
       margin:0;
+    }
+    #grid {
+      display:grid;
+      grid-template-columns:150px 1fr;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+    .line {
+      border-left: 1px black solid;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    h2 {
+      font-size: 50px;
     }
   </style>
 </head>
 <!--본문-->
 <body>
-  <h1><a href="index.html" class="saw active line">WEB</a></h1>
-  <ol> <!--Parents-->
-    <li><a href="1.html" class="saw" id="first">HTML</a></li> <!--Children-->
-                          <!--우선순위를 높이려면 아이디 선택자를 씀
-                                중복되서는 안 -->
-    <li><a href="2.html" class="saw">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <ul>
-    <li>egoing</li>
-    <li>k8805</li>
-    <li>youbin</li>
-  </ul>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/pYOEy_mAMpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-  The World Wide Web (WWW), commonly known as the Web, is an information system where documents and other web resources are identified by Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hypertext, and are accessible over the Internet. The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP) and may be accessed by users by a software application called a web browser and are published by a software application called a web server.
+  <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
+    <div>
+      <ol> <!--Parents-->
+        <li><a href="1.html">HTML</a></li> <!--Children-->
+                              <!--우선순위를 높이려면 아이디 선택자를 씀
+                                    중복되서는 안 -->
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <ul>
+        <li>egoing</li>
+        <li>youbin</li>
+      </ul>
+    </div>
+    <div class="line">
+      <h2>DEF</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pYOEy_mAMpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <p>
+        &nbsp;The World Wide Web (WWW), commonly known as the Web, is an information system where documents and other web resources are identified by Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hypertext, and are accessible over the Internet. The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP) and may be accessed by users by a software application called a web browser and are published by a software application called a web server.
+      </p>
+    </div>
+ </div>
   <div id="disqus_thread"></div>
 <script>
 
@@ -80,3 +103,4 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
+
