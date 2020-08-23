@@ -5,98 +5,71 @@
   <title>INDEX - web</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script>
-    var colorF = {
-        setBackGroundColor : function(color) {
-          document.querySelector('body').style.backgroundColor = color;
-        },
-        setColor : function(color) {
-          document.querySelector('body').style.color = color;
-        },
-        setColorA : function(color) {
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while (i < alist.length) {
-            alist[i].style.color = color;
-            i = i + 1;
-          }
-        }
-      }
-      function changeInputValue(value) {
-        var button = document.querySelectorAll('input');
-        var i = 0;
-        while (i < button.length) {
-          button[i].value = value;
-          i++;
-        }
-      }
-      function NightDayChange(self) {
-
-        if (self.value === 'night') {
-          colorF.setBackGroundColor('#303030');
-          colorF.setColor('white');
-          colorF.setColorA('white');
-          changeInputValue('day');
-        }
-
-        else {
-          colorF.setBackGroundColor('white');
-          colorF.setColor('black');
-          colorF.setColorA('black');
-          changeInputValue('night');
-        }
-    }
-  </script>
+  <script src="colors.js"></script>
 </head>
 <!--본문-->
 <body>
-  <h1><a href="index.html" class="link">WEB</a></h1>
+
+  <h1><a href="index.html">WEB</a></h1>
+
   <div id="grid">
-    <div>
+    <div id="line">
+
       <input type="button" value="night" onclick="
         NightDayChange(this);
       ">
+
       <ol>
-        <li><a href="1.html" class="link">HTML</a></li>
-        <li><a href="2.html" class="link">CSS</a></li>
-        <li><a href="3.html" class="link">JavaScript</a></li>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
       </ol>
+
       <ul>
         <li>egoing</li>
         <li>k8805</li>
         <li>youbin</li>
       </ul>
+
     </div>
-    <div class="line">
+
+    <div class="padding">
+
       <h2>DEF</h2>
+
       <iframe width="560" height="315" src="https://www.youtube.com/embed/pYOEy_mAMpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
       <p>
         &nbsp;The World Wide Web (WWW), commonly known as the Web, is an information system where documents and other web resources are identified by Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hypertext, and are accessible over the Internet. The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP) and may be accessed by users by a software application called a web browser and are published by a software application called a web server.
       </p>
+
     </div>
  </div>
-<input type="button" value="night" onclick="
- NightDayChange(this);
-">
-  <div id="disqus_thread"></div>
-<script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-jtoyrmcoap.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <input type="button" value="night" onclick="
+   NightDayChange(this);
+  ">
+
+  <div id="disqus_thread"></div>
+
+  <script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://web1-jtoyrmcoap.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
